@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services | The Loftis Group</title>
+<meta name="description" content="Messaging frameworks, storytelling and content creation, social media strategy, and practical AI workflows for small nonprofits.">
+<meta property="og:title" content="Services | The Loftis Group">
+<meta property="og:description" content="Strategic communications and fundraising guidance for small nonprofits, built around storytelling and measurable results.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,500&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FCFBF7;
+  --ink:#1B2833;
+  --ink-deep:#111E28;
+  --slate:#46555F;
+  --line:#E5E1D4;
+  --hl:#FFD84A;
+  --hl-soft:#FFF4C9;
+  --paper-dark:#F3F1E8;
+  --slate-dark:#B9C6CE;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --sans:"Public Sans",system-ui,"Segoe UI",Helvetica,Arial,sans-serif;
+  --w:1060px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:-0.012em;text-wrap:balance}
+h1{font-size:clamp(2.4rem,5.4vw,3.8rem)}
+h2{font-size:clamp(1.9rem,3.8vw,2.75rem)}
+h3{font-size:1.45rem;font-weight:600}
+p{max-width:62ch}
+a{color:inherit}
+mark{background-image:linear-gradient(100deg,rgba(255,216,74,0) 0.5%,var(--hl) 3%,var(--hl) 97%,rgba(255,216,74,0) 99.5%);background-repeat:no-repeat;background-size:100% 100%;color:inherit;padding:.04em .16em;margin:0 -.06em;border-radius:2px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:10px 16px;z-index:50;font-weight:600}
+.skip:focus{left:12px;top:12px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--ink);outline-offset:2px;border-radius:2px}
+.band a:focus-visible,footer a:focus-visible{outline-color:var(--hl)}
+
+header{border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:1.3rem;text-decoration:none;letter-spacing:-0.01em}
+.brand::before{content:"";width:24px;height:11px;background:var(--hl);transform:skewX(-16deg);border-radius:1px}
+.navlinks{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;font-weight:600;font-size:.95rem;padding:6px 0;border-bottom:3px solid transparent}
+.navlinks a:hover{border-bottom-color:var(--hl)}
+.navlinks a[aria-current="page"]{border-bottom-color:var(--hl)}
+.btn{display:inline-block;background:var(--ink);color:var(--paper);text-decoration:none;font-weight:700;font-size:.95rem;padding:13px 22px;border-radius:3px;border:2px solid var(--ink)}
+.btn:hover{background:var(--ink-deep)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--hl-soft)}
+.band .btn{background:var(--hl);color:var(--ink);border-color:var(--hl)}
+.band .btn:hover{background:#FFE071}
+.band .btn.ghost{background:transparent;color:var(--paper-dark);border-color:var(--paper-dark)}
+.band .btn.ghost:hover{background:rgba(255,255,255,.08)}
+.nav .btn{padding:10px 18px}
+
+.eyebrow{display:flex;align-items:center;gap:10px;font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:18px}
+.eyebrow::before{content:"";width:16px;height:8px;background:var(--hl);transform:skewX(-16deg)}
+.band .eyebrow{color:var(--slate-dark)}
+
+.pagehead{padding:80px 0 64px;border-bottom:1px solid var(--line)}
+.pagehead .standfirst{font-size:1.2rem;line-height:1.6;color:var(--slate);margin-top:22px;max-width:56ch}
+
+.sec{padding:88px 0}
+.svc{display:grid;grid-template-columns:260px 1fr;gap:44px;padding:56px 0;border-bottom:1px solid var(--line);align-items:start}
+.svc:last-of-type{border-bottom:none}
+.svc .num{display:inline-block;background:var(--hl);color:var(--ink);font-weight:700;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 9px;border-radius:2px;margin-bottom:14px}
+.svc h2{font-size:clamp(1.6rem,2.8vw,2.1rem)}
+.svc .body p{color:var(--slate);font-size:1.06rem}
+.svc .body p + p{margin-top:16px}
+
+.band{background:var(--ink-deep);color:var(--paper-dark)}
+.band h2{color:#FFFFFF;max-width:24ch}
+.band p{color:var(--slate-dark)}
+.band .story-body{font-size:1.13rem;margin:24px 0 0;max-width:60ch}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:32px}
+.arrowlink{font-weight:700;text-decoration:none;border-bottom:3px solid var(--hl);padding-bottom:3px}
+
+footer{background:var(--ink);color:var(--paper-dark);padding:56px 0 40px}
+.foot-grid{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap}
+.foot-brand{font-family:var(--serif);font-weight:600;font-size:1.25rem;color:#FFFFFF}
+footer a{color:var(--paper-dark);text-decoration:none;border-bottom:2px solid transparent}
+footer a:hover{border-bottom-color:var(--hl)}
+.foot-col{display:flex;flex-direction:column;gap:10px;font-size:.96rem}
+.foot-label{font-weight:700;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate-dark);margin-bottom:4px}
+.foot-meta{margin-top:44px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.86rem;color:var(--slate-dark)}
+.foot-meta a{color:var(--slate-dark)}
+
+@media (max-width:900px){
+  .svc{grid-template-columns:1fr;gap:14px}
+}
+@media (max-width:640px){
+  .pagehead{padding:56px 0 44px}
+  .sec{padding:64px 0}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">The Loftis Group</a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="about.html">About Tony</a>
+      <a href="writing.html">Writing</a>
+      <a class="btn" href="tel:+16176255980">Call 617-625-5980</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="pagehead">
+    <div class="wrap">
+      <p class="eyebrow">Services</p>
+      <h1>The work, in <mark>plain terms</mark>.</h1>
+      <p class="standfirst">Strategic communications and fundraising guidance for small nonprofits, built around storytelling, digital strategy, and measurable results.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="svc">
+      <div>
+        <span class="num">Service 01</span>
+        <h2>Messaging and strategic communications</h2>
+      </div>
+      <div class="body">
+        <p>Most small nonprofits do not have a message problem. They have a consistency problem. The Loftis Group builds messaging frameworks that resonate with external and internal audiences, so everyone from the executive director to the newest volunteer tells the same story on every channel.</p>
+        <p>That includes fundraising communications. The case for support, the appeal, and the thank-you note are all part of one message, and they should sound like it.</p>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div>
+        <span class="num">Service 02</span>
+        <h2>Storytelling and content creation</h2>
+      </div>
+      <div class="body">
+        <p>Testimonials gathered without a plan produce a hard drive full of footage and no story. Tony starts with the questions that matter: What three things do you want your organization to be known for? Which narratives prove them? Then the interviews, the writing, and the editing all pull in the same direction.</p>
+        <p>Outline first. Then welcome the unexpected discoveries you find along the way.</p>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div>
+        <span class="num">Service 03</span>
+        <h2>Social media strategy</h2>
+      </div>
+      <div class="body">
+        <p>Channel plans, content calendars, and posting rhythms matched to the capacity of a small team. Tony has taught social media skills to youth mentoring groups, theater companies, anti-sex-trafficking organizations, and the missing persons community.</p>
+        <p>The bar is always the same: show up consistently, sound like yourself, and measure what matters.</p>
+      </div>
+    </div>
+
+    <div class="svc">
+      <div>
+        <span class="num">Service 04</span>
+        <h2>Practical AI for small teams</h2>
+      </div>
+      <div class="body">
+        <p>AI will not replace your organization's voice, and it should not. Used well, it makes first drafts faster and editing sharper. Tony helps teams build honest AI workflows: draft with more than one model, prompt with specifics, fact-check everything, and edit until the output sounds like you.</p>
+        <p>An investment in learning the tools now pays off every week after.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec band">
+    <div class="wrap">
+      <p class="eyebrow">Who this is for</p>
+      <h2>Built for teams where communications is one slice of a bigger job.</h2>
+      <p class="story-body">Most of Tony's clients are not communications professionals. They run programs, raise money, and manage everything else, with communications wedged in between. The engagement is designed for that reality: clear recommendations, plain language, and systems a small team can actually run.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:info@theloftisgroup.com">Email Tony</a>
+        <a class="btn ghost" href="tel:+16176255980">Call 617-625-5980</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <span class="foot-brand">The Loftis Group</span>
+        <span>Strategic communications, storytelling, and digital strategy for small nonprofits.</span>
+        <span>Greater Boston, Massachusetts</span>
+      </div>
+      <div class="foot-col">
+        <span class="foot-label">Contact</span>
+        <a href="tel:+16176255980">617-625-5980</a>
+        <a href="mailto:info@theloftisgroup.com">info@theloftisgroup.com</a>
+        <a href="https://www.linkedin.com/in/tonyloftis/">LinkedIn</a>
+      </div>
+      <div class="foot-col">
+        <span class="foot-label">Explore</span>
+        <a href="services.html">Services</a>
+        <a href="about.html">About Tony</a>
+        <a href="writing.html">Writing</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <span>&copy; 2026 The Loftis Group. All rights reserved.</span>
+      <span>Site by <a href="https://www.jakelabate.com">Jake Labate</a></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
