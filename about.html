@@ -92,10 +92,18 @@ header{border-bottom:1px solid var(--line)}
 .eyebrow::before{content:"";width:16px;height:8px;background:var(--hl);transform:skewX(-16deg)}
 .band .eyebrow{color:var(--slate-dark)}
 
-.pagehead{padding:80px 0 64px;border-bottom:1px solid var(--line)}
+.pagehead{padding:80px 0 56px;border-bottom:1px solid var(--line)}
 .pagehead .standfirst{font-family:var(--serif);font-size:1.5rem;line-height:1.45;color:var(--slate);margin-top:22px;max-width:34ch}
 
-.bio{padding-top:32px;padding-bottom:40px}
+.tldr{background:var(--hl-soft);border-left:4px solid var(--hl);padding:26px 30px;margin-top:36px;max-width:760px}
+.tldr .label{font-weight:700;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--slate);margin-bottom:6px}
+.ticks{list-style:none}
+.ticks li{position:relative;padding:7px 0 7px 28px;color:var(--slate);font-size:1.02rem;max-width:60ch}
+.ticks li::before{content:"";position:absolute;left:2px;top:1.05em;width:14px;height:7px;background:var(--hl);transform:skewX(-16deg)}
+.tldr .ticks li::before{background:var(--ink)}
+.ticks strong{color:var(--ink)}
+
+.bio{padding-top:16px;padding-bottom:40px}
 .bio-block{display:grid;grid-template-columns:260px 1fr;gap:44px;padding:52px 0;border-bottom:1px solid var(--line);align-items:start}
 .bio-block:last-of-type{border-bottom:none}
 .bio-block .body p{color:var(--slate);font-size:1.08rem}
@@ -106,14 +114,8 @@ header{border-bottom:1px solid var(--line)}
 .band h2{color:#FFFFFF;max-width:24ch}
 .band p{color:var(--slate-dark)}
 .sec{padding:88px 0}
-.band .story-body{font-size:1.13rem;margin:24px 0 0;max-width:60ch}
+.band .story-body{font-size:1.13rem;margin:24px 0 0;max-width:58ch}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:32px}
-
-.facts{background:var(--hl-soft);border-left:4px solid var(--hl);padding:26px 30px;margin-top:8px}
-.facts h2{font-size:1.25rem;margin-bottom:12px}
-.facts ul{list-style:none}
-.facts li{padding:8px 0;border-bottom:1px solid rgba(27,40,51,.12);font-size:1rem}
-.facts li:last-child{border-bottom:none}
 
 footer{background:var(--ink);color:var(--paper-dark);padding:56px 0 40px}
 .foot-grid{display:flex;justify-content:space-between;gap:36px;flex-wrap:wrap}
@@ -129,8 +131,12 @@ footer a:hover{border-bottom-color:var(--hl)}
   .bio-block{grid-template-columns:1fr;gap:14px}
 }
 @media (max-width:640px){
-  .pagehead{padding:56px 0 44px}
+  .pagehead{padding:56px 0 40px}
   .sec{padding:64px 0}
+  .tldr{padding:22px 22px}
+  .navlinks{gap:14px}
+  .navlinks a{font-size:.88rem}
+  .nav .btn{padding:8px 14px;font-size:.88rem}
 }
 </style>
 </head>
@@ -155,6 +161,16 @@ footer a:hover{border-bottom-color:var(--hl)}
       <p class="eyebrow">About</p>
       <h1>Tony Loftis</h1>
       <p class="standfirst">Communications strategist. Award-winning writer. <mark>Nonprofit leader.</mark></p>
+      <div class="tldr">
+        <p class="label">The short version</p>
+        <ul class="ticks">
+          <li><strong>Runs The Loftis Group</strong>, a communications consultancy for small nonprofits.</li>
+          <li><strong>Decades of communications work</strong>, from the US Department of Transportation to the City of Cambridge.</li>
+          <li><strong>Founded Find Your Missing Child.</strong> The Boston Globe and NPR covered the work.</li>
+          <li><strong>Board member</strong> at the MassBay Community College Foundation, the Coltrane Home, and the Storycraft Institute.</li>
+          <li><strong>B.A., Tufts University.</strong> John Jay College of Criminal Justice.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -162,46 +178,39 @@ footer a:hover{border-bottom-color:var(--hl)}
     <div class="bio-block">
       <h2>The through line</h2>
       <div class="body">
-        <p>Tony Loftis runs The Loftis Group, a communications consultancy for small nonprofits. For most of his career he has solved communications problems for organizations of every size, from the <strong>US Department of Transportation</strong> and the <strong>City of Cambridge</strong> to social justice nonprofits across Greater Boston.</p>
-        <p>His agency years included leading the <strong>IBM Global Technology Services</strong> account at Davis Murphy Group, then the firm's second-largest account by revenue, and later work as a communications strategist at <strong>fama PR</strong>. As communications director at <strong>Demand Abolition</strong>, he helped drive an advocacy campaign working to end the illegal commercial sex industry.</p>
+        <p>Tony Loftis runs The Loftis Group, a communications consultancy for small nonprofits. For most of his career he has solved communications problems for organizations of every size. The list runs from the <strong>US Department of Transportation</strong> and the <strong>City of Cambridge</strong> to social justice nonprofits across Greater Boston.</p>
+        <p>His agency years included the <strong>IBM Global Technology Services</strong> account at Davis Murphy Group, then the firm's second-largest by revenue. Later, communications strategy at <strong>fama PR</strong>. As communications director at <strong>Demand Abolition</strong>, he helped drive a campaign working to end the illegal commercial sex industry.</p>
       </div>
     </div>
 
     <div class="bio-block">
       <h2>The story that changed the work</h2>
       <div class="body">
-        <p>In November 2011, Tony's 13-year-old daughter ran away from home. For 12 days, Tony and his wife did the one thing they knew how to do: they communicated. A clear message, a Facebook page shared by thousands of strangers, and press coverage produced the tip that brought her home safely.</p>
-        <p>Tony took what the family learned and founded <strong>Find Your Missing Child</strong>, a nonprofit that taught parents to use social media and the press to bring their kids home, starting with a step-by-step social media guide for families. The organization's work was covered by The Boston Globe and NPR, and Tony wrote regularly for HuffPost on runaways, family abduction, and the missing persons community.</p>
+        <p>In November 2011, Tony's 13-year-old daughter ran away. For 12 days, Tony and his wife did the one thing they knew: they communicated. A clear message. A Facebook page shared by thousands of strangers. Press coverage. A tip came in, and she came home safe.</p>
+        <p>Tony turned the experience into <strong>Find Your Missing Child</strong>. The nonprofit taught parents to use social media and the press to bring their kids home, starting with a step-by-step guide for families. The Boston Globe and NPR covered the work. Tony wrote for HuffPost on runaways and the missing persons community.</p>
       </div>
     </div>
 
     <div class="bio-block">
       <h2>Teaching runs through all of it</h2>
       <div class="body">
-        <p>Tony has taught social media skills to youth mentoring groups, theater companies, anti-sex-trafficking organizations, and the missing persons community, always with the same goal: give small teams tools they can actually use. He has also written about what four years of improv classes at ImprovBoston taught him about communications.</p>
+        <p>Tony has taught social media to youth mentoring groups, theater companies, anti-sex-trafficking organizations, and the missing persons community. Same goal every time: give small teams tools they can actually use. He has also written about what four years of improv classes at ImprovBoston taught him about communications.</p>
       </div>
     </div>
 
     <div class="bio-block">
       <h2>Civic leadership</h2>
       <div class="body">
-        <p>Off the clock, Tony has held leadership roles across Massachusetts youth soccer, including serving as president of the <strong>Boston Area Youth Soccer League</strong>, the largest soccer league in the state, which puts 18,000 players from 53 towns in eastern Massachusetts on the field. In that role he strengthened the organization's institutional controls and led a reform of its governance.</p>
-        <p>A 2014 graduate of the MetroWest Leadership Academy, he has also served on boards for Habitat for Humanity's MetroWest affiliate, Wayland Youth Soccer, CASCAP, and the MetroWest Nonprofit Network. In his spare time he volunteers at professional golf tournaments, including serving as a transportation captain for the PGA Tour's Boston stop.</p>
+        <p>Off the clock, Tony has led across Massachusetts youth soccer. As president of the <strong>Boston Area Youth Soccer League</strong>, the largest in the state, he helped put 18,000 players from 53 towns on the field. He strengthened the organization's institutional controls and led a governance reform.</p>
+        <p>He is a 2014 graduate of the MetroWest Leadership Academy. Past boards include Habitat for Humanity's MetroWest affiliate, Wayland Youth Soccer, CASCAP, and the MetroWest Nonprofit Network. He also volunteers at professional golf tournaments, including as a transportation captain for the PGA Tour's Boston stop.</p>
       </div>
     </div>
 
     <div class="bio-block">
       <h2>Now</h2>
       <div class="body">
-        <div class="facts">
-          <h2>Board service and education</h2>
-          <ul>
-            <li><strong>MassBay Community College Foundation</strong>, Board of Directors. The Foundation raises funds and awards scholarships in support of MassBay Community College.</li>
-            <li><strong>The John and Alice Coltrane Home</strong>, Board of Directors.</li>
-            <li><strong>Institute for Storycraft and Information Gathering</strong>, Board of Directors.</li>
-            <li><strong>Education:</strong> B.A., Tufts University. John Jay College of Criminal Justice.</li>
-          </ul>
-        </div>
+        <p>Today Tony serves on three boards. The <strong>MassBay Community College Foundation</strong>, which raises funds and awards scholarships for MassBay students. <strong>The John and Alice Coltrane Home</strong>. The <strong>Institute for Storycraft and Information Gathering</strong>.</p>
+        <p>He holds a B.A. from Tufts University and studied at John Jay College of Criminal Justice.</p>
       </div>
     </div>
   </div>
@@ -210,7 +219,7 @@ footer a:hover{border-bottom-color:var(--hl)}
     <div class="wrap">
       <p class="eyebrow">Work with Tony</p>
       <h2>The best time to fix your messaging was last year. The second best time is now.</h2>
-      <p class="story-body">Tell Tony what you want your organization to be known for. He will help you say it, everywhere it matters.</p>
+      <p class="story-body">Tell Tony what you want your organization to be known for. He will help you say it. Everywhere.</p>
       <div class="cta-row">
         <a class="btn" href="mailto:info@theloftisgroup.com">Email Tony</a>
         <a class="btn ghost" href="tel:+16176255980">Call 617-625-5980</a>
