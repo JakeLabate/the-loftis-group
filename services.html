@@ -67,20 +67,26 @@ header{border-bottom:1px solid var(--line)}
 .band .eyebrow{color:var(--slate-dark)}
 
 .pagehead{padding:80px 0 64px;border-bottom:1px solid var(--line)}
-.pagehead .standfirst{font-size:1.2rem;line-height:1.6;color:var(--slate);margin-top:22px;max-width:56ch}
+.pagehead .standfirst{font-size:1.2rem;line-height:1.6;color:var(--slate);margin-top:22px;max-width:52ch}
 
 .sec{padding:88px 0}
 .svc{display:grid;grid-template-columns:260px 1fr;gap:44px;padding:56px 0;border-bottom:1px solid var(--line);align-items:start}
 .svc:last-of-type{border-bottom:none}
 .svc .num{display:inline-block;background:var(--hl);color:var(--ink);font-weight:700;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 9px;border-radius:2px;margin-bottom:14px}
 .svc h2{font-size:clamp(1.6rem,2.8vw,2.1rem)}
-.svc .body p{color:var(--slate);font-size:1.06rem}
-.svc .body p + p{margin-top:16px}
+.svc .body > p{color:var(--ink);font-size:1.08rem;font-weight:600;max-width:52ch}
+.ticks{list-style:none;margin-top:16px}
+.ticks li{position:relative;padding:7px 0 7px 28px;color:var(--slate);font-size:1.02rem;max-width:58ch}
+.ticks li::before{content:"";position:absolute;left:2px;top:1.05em;width:14px;height:7px;background:var(--hl);transform:skewX(-16deg)}
+
+.rules-sec{padding:72px 0;border-top:1px solid var(--line)}
+.rules{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.rules span{background:var(--hl);color:var(--ink);font-weight:700;padding:10px 16px;border-radius:3px;font-size:.98rem}
 
 .band{background:var(--ink-deep);color:var(--paper-dark)}
 .band h2{color:#FFFFFF;max-width:24ch}
 .band p{color:var(--slate-dark)}
-.band .story-body{font-size:1.13rem;margin:24px 0 0;max-width:60ch}
+.band .story-body{font-size:1.13rem;margin:24px 0 0;max-width:58ch}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:32px}
 .arrowlink{font-weight:700;text-decoration:none;border-bottom:3px solid var(--hl);padding-bottom:3px}
 
@@ -100,6 +106,9 @@ footer a:hover{border-bottom-color:var(--hl)}
 @media (max-width:640px){
   .pagehead{padding:56px 0 44px}
   .sec{padding:64px 0}
+  .navlinks{gap:14px}
+  .navlinks a{font-size:.88rem}
+  .nav .btn{padding:8px 14px;font-size:.88rem}
 }
 </style>
 </head>
@@ -123,7 +132,7 @@ footer a:hover{border-bottom-color:var(--hl)}
     <div class="wrap">
       <p class="eyebrow">Services</p>
       <h1>The work, in <mark>plain terms</mark>.</h1>
-      <p class="standfirst">Strategic communications and fundraising guidance for small nonprofits, built around storytelling, digital strategy, and measurable results.</p>
+      <p class="standfirst">Strategic communications. Storytelling. Digital strategy. Measurable results. Built for small nonprofits.</p>
     </div>
   </section>
 
@@ -134,8 +143,12 @@ footer a:hover{border-bottom-color:var(--hl)}
         <h2>Messaging and strategic communications</h2>
       </div>
       <div class="body">
-        <p>Most small nonprofits do not have a message problem. They have a consistency problem. The Loftis Group builds messaging frameworks that resonate with external and internal audiences, so everyone from the executive director to the newest volunteer tells the same story on every channel.</p>
-        <p>That includes fundraising communications. The case for support, the appeal, and the thank-you note are all part of one message, and they should sound like it.</p>
+        <p>Most small nonprofits do not have a message problem. They have a consistency problem.</p>
+        <ul class="ticks">
+          <li>A messaging framework built on the three things you want to be known for.</li>
+          <li>Language every staffer, board member, and volunteer can carry.</li>
+          <li>Fundraising included. The appeal and the thank-you are messages too.</li>
+        </ul>
       </div>
     </div>
 
@@ -145,8 +158,12 @@ footer a:hover{border-bottom-color:var(--hl)}
         <h2>Storytelling and content creation</h2>
       </div>
       <div class="body">
-        <p>Testimonials gathered without a plan produce a hard drive full of footage and no story. Tony starts with the questions that matter: What three things do you want your organization to be known for? Which narratives prove them? Then the interviews, the writing, and the editing all pull in the same direction.</p>
-        <p>Outline first. Then welcome the unexpected discoveries you find along the way.</p>
+        <p>Know the story before you gather it. Testimonials collected without a plan produce footage, not stories.</p>
+        <ul class="ticks">
+          <li>A standard question set, so every interview supports your key messages.</li>
+          <li>Narratives mapped to the three things you want to be known for.</li>
+          <li>Outline first. Then welcome the unexpected discoveries.</li>
+        </ul>
       </div>
     </div>
 
@@ -156,8 +173,12 @@ footer a:hover{border-bottom-color:var(--hl)}
         <h2>Social media strategy</h2>
       </div>
       <div class="body">
-        <p>Channel plans, content calendars, and posting rhythms matched to the capacity of a small team. Tony has taught social media skills to youth mentoring groups, theater companies, anti-sex-trafficking organizations, and the missing persons community.</p>
-        <p>The bar is always the same: show up consistently, sound like yourself, and measure what matters.</p>
+        <p>Consistency beats volume. Small teams win by showing up on a rhythm they can keep.</p>
+        <ul class="ticks">
+          <li>A channel plan sized to your actual capacity.</li>
+          <li>Content calendars built around your stories and your dates.</li>
+          <li>Metrics that matter, reported in plain language.</li>
+        </ul>
       </div>
     </div>
 
@@ -167,8 +188,28 @@ footer a:hover{border-bottom-color:var(--hl)}
         <h2>Practical AI for small teams</h2>
       </div>
       <div class="body">
-        <p>AI will not replace your organization's voice, and it should not. Used well, it makes first drafts faster and editing sharper. Tony helps teams build honest AI workflows: draft with more than one model, prompt with specifics, fact-check everything, and edit until the output sounds like you.</p>
-        <p>An investment in learning the tools now pays off every week after.</p>
+        <p>AI should write with you, not for you. Learning it now pays off every week after.</p>
+        <ul class="ticks">
+          <li>Draft with more than one model. No single model is perfect.</li>
+          <li>Prompt with specifics: audience, tone, length.</li>
+          <li>Check every fact. Then edit until it sounds like you.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="rules-sec">
+    <div class="wrap">
+      <p class="eyebrow">The house style</p>
+      <h2>Every deliverable follows the rules Tony coaches.</h2>
+      <div class="rules">
+        <span>Reader first.</span>
+        <span>Small words.</span>
+        <span>Short sentences.</span>
+        <span>Short paragraphs.</span>
+        <span>Get to the point.</span>
+        <span>Bullets guide the eye.</span>
+        <span>Outline, draft, revise.</span>
       </div>
     </div>
   </section>
@@ -177,7 +218,7 @@ footer a:hover{border-bottom-color:var(--hl)}
     <div class="wrap">
       <p class="eyebrow">Who this is for</p>
       <h2>Built for teams where communications is one slice of a bigger job.</h2>
-      <p class="story-body">Most of Tony's clients are not communications professionals. They run programs, raise money, and manage everything else, with communications wedged in between. The engagement is designed for that reality: clear recommendations, plain language, and systems a small team can actually run.</p>
+      <p class="story-body">Most of Tony's clients are not communications professionals. They run programs and raise money. Communications is wedged in between. The engagement respects that: clear recommendations, plain language, and systems a small team can actually run.</p>
       <div class="cta-row">
         <a class="btn" href="mailto:info@theloftisgroup.com">Email Tony</a>
         <a class="btn ghost" href="tel:+16176255980">Call 617-625-5980</a>
