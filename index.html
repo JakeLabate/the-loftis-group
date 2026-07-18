@@ -89,24 +89,35 @@ header{border-bottom:1px solid var(--line)}
 .eyebrow::before{content:"";width:16px;height:8px;background:var(--hl);transform:skewX(-16deg)}
 .band .eyebrow{color:var(--slate-dark)}
 
-.hero{padding:96px 0 88px}
-.hero .standfirst{font-size:1.22rem;line-height:1.6;color:var(--slate);margin:26px 0 34px;max-width:56ch}
+.hero{padding:96px 0 72px}
+.hero .standfirst{font-size:1.22rem;line-height:1.6;color:var(--slate);margin:26px 0 34px;max-width:52ch}
 .cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
 .proofline{margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font-size:.98rem;color:var(--slate);max-width:60ch}
 
+.stat{display:flex;align-items:center;gap:34px;flex-wrap:wrap;padding-top:52px;padding-bottom:52px;border-top:1px solid var(--line)}
+.stat .n{font-family:var(--serif);font-weight:600;font-size:clamp(4.2rem,10vw,7rem);line-height:.85;flex-shrink:0}
+.stat .n mark{padding:.02em .1em}
+.stat p{color:var(--slate);font-size:1.1rem;max-width:44ch}
+.stat p strong{color:var(--ink)}
+
 .sec{padding:88px 0}
 .sec + .sec{border-top:1px solid var(--line)}
-.sec-lead{font-size:1.15rem;color:var(--slate);margin:18px 0 0;max-width:58ch}
+.sec-lead{font-size:1.15rem;color:var(--slate);margin:18px 0 0;max-width:56ch}
 .messages{display:grid;grid-template-columns:repeat(3,1fr);gap:34px;margin-top:52px}
 .msg{border-top:3px solid var(--ink);padding-top:22px}
 .msg .num{display:inline-block;background:var(--hl);color:var(--ink);font-weight:700;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;padding:5px 9px;border-radius:2px;margin-bottom:14px}
 .msg h3{margin-bottom:12px}
 .msg p{font-size:1rem;color:var(--slate)}
 
+.ticks{list-style:none;margin-top:14px}
+.ticks li{position:relative;padding:7px 0 7px 28px;color:var(--slate);font-size:1.02rem;max-width:60ch}
+.ticks li::before{content:"";position:absolute;left:2px;top:1.05em;width:14px;height:7px;background:var(--hl);transform:skewX(-16deg)}
+.ticks strong{color:var(--ink)}
+
 .band{background:var(--ink-deep);color:var(--paper-dark)}
 .band h2{color:#FFFFFF;max-width:22ch}
 .band p{color:var(--slate-dark)}
-.band .story-body{font-size:1.13rem;margin:24px 0 30px;max-width:60ch}
+.band .story-body{font-size:1.13rem;margin:24px 0 30px;max-width:58ch}
 .arrowlink{font-weight:700;text-decoration:none;border-bottom:3px solid var(--hl);padding-bottom:3px}
 .arrowlink:hover{color:#FFFFFF}
 .sec.light .arrowlink:hover{color:var(--ink-deep)}
@@ -143,10 +154,13 @@ footer a:hover{border-bottom-color:var(--hl)}
   .exp-grid{grid-template-columns:1fr}
 }
 @media (max-width:640px){
-  .hero{padding:64px 0 60px}
+  .hero{padding:64px 0 52px}
   .sec{padding:64px 0}
   .exp{flex-direction:column;gap:4px}
   .exp .role{text-align:left}
+  .navlinks{gap:14px}
+  .navlinks a{font-size:.88rem}
+  .nav .btn{padding:8px 14px;font-size:.88rem}
 }
 </style>
 </head>
@@ -170,12 +184,19 @@ footer a:hover{border-bottom-color:var(--hl)}
     <div class="wrap">
       <p class="eyebrow">Communications for small nonprofits</p>
       <h1>Consistent, <mark class="hero-mark">compelling</mark> communication.</h1>
-      <p class="standfirst">The Loftis Group helps small nonprofits find their message, tell their story, and sound like themselves on every channel: the grant report, the gala speech, the caption, and the reply in the comments.</p>
+      <p class="standfirst">The Loftis Group helps small nonprofits find their message and tell their story. On every channel: the grant report, the gala speech, the caption, the reply in the comments.</p>
       <div class="cta-row">
         <a class="btn" href="mailto:info@theloftisgroup.com">Email Tony</a>
         <a class="btn ghost" href="tel:+16176255980">Call 617-625-5980</a>
       </div>
-      <p class="proofline">Decades of communications work, from the US Department of Transportation to the City of Cambridge to the social justice nonprofits down the street.</p>
+      <p class="proofline">Decades of communications work. From the US Department of Transportation to the City of Cambridge to the nonprofits down the street.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stat">
+      <span class="n"><mark>26</mark></span>
+      <p><strong>Seconds. That is how long readers spend on a piece of content</strong>, according to eye-tracking studies. Most people skim. So every message here is built for the skim.</p>
     </div>
   </section>
 
@@ -183,22 +204,22 @@ footer a:hover{border-bottom-color:var(--hl)}
     <div class="wrap">
       <p class="eyebrow">The method</p>
       <h2>Every engagement starts with one question.</h2>
-      <p class="sec-lead">What three things do you want your organization to be known for? Answer that, and every channel, campaign, and conversation has a job to do. Here is how Tony answers it for his own practice.</p>
+      <p class="sec-lead">What three things do you want your organization to be known for? Answer that, and every channel has a job to do. Here is how Tony answers it for his own practice.</p>
       <div class="messages">
         <div class="msg">
           <span class="num">Message 01</span>
           <h3>Messaging the whole organization can carry</h3>
-          <p>Messaging frameworks and strategic communications that align staff, board, and supporters, so the story stays consistent no matter who is telling it. Fundraising guidance included, because the case for support is a message too.</p>
+          <p>Frameworks that align staff, board, and supporters. The story stays consistent no matter who tells it. Fundraising included: the case for support is a message too.</p>
         </div>
         <div class="msg">
           <span class="num">Message 02</span>
           <h3>Stories planned before they are gathered</h3>
-          <p>Storytelling and content creation that starts with the end in mind: decide which stories you need, then collect the testimonials and material that prove them. Written and edited with a working writer's discipline.</p>
+          <p>Decide the stories you need first. Then gather the testimonials that prove them. Outline, then welcome the discoveries.</p>
         </div>
         <div class="msg">
           <span class="num">Message 03</span>
           <h3>Digital that fits a small team</h3>
-          <p>Social media strategy, content calendars, and practical AI workflows sized for organizations where communications is one slice of somebody's job. Measurable results, not busywork.</p>
+          <p>Social strategy, calendars, and practical AI workflows. Sized for teams where communications is one slice of the job. Measurable results, not busywork.</p>
         </div>
       </div>
       <p class="sec-foot"><a class="arrowlink" href="services.html">See the services &#8594;</a></p>
@@ -208,8 +229,8 @@ footer a:hover{border-bottom-color:var(--hl)}
   <section class="sec band">
     <div class="wrap">
       <p class="eyebrow">Why storytelling</p>
-      <h2>Tony learned what a clear message and a mobilized community can do, in the hardest way a parent can.</h2>
-      <p class="story-body">In 2011, his 13-year-old daughter went missing. For 12 days the family ran the full communications playbook: a clear message, social media, and the press, until a tip brought her home. Tony turned that experience into Find Your Missing Child, a nonprofit that taught other parents to do the same. The work was covered by The Boston Globe and NPR.</p>
+      <h2>Tony learned what a clear message and a mobilized community can do. The hard way.</h2>
+      <p class="story-body">In 2011, his 13-year-old daughter went missing. The family ran the playbook: a clear message, social media, the press. Twelve days later, a tip brought her home. Tony founded Find Your Missing Child to teach other parents the same. The Boston Globe and NPR covered the work.</p>
       <a class="arrowlink" href="about.html">Read Tony's story &#8594;</a>
     </div>
   </section>
@@ -237,11 +258,11 @@ footer a:hover{border-bottom-color:var(--hl)}
       <div class="writing-list">
         <article class="witem">
           <h3><a href="https://www.theloftisgroup.com/subtitle.html">Practical Tips for Using AI in Nonprofit Communications</a></h3>
-          <p>A starter kit for nonprofit teams adopting AI: draft with more than one model, write specific prompts, verify every fact, and edit until the result sounds like your organization instead of a machine.</p>
+          <p>A starter kit for teams adopting AI. Draft with more than one model. Prompt with specifics. Check every fact. Edit until it sounds like you.</p>
         </article>
         <article class="witem">
           <h3><a href="https://www.theloftisgroup.com/vbid-811d7998-ldzb0d3l-POST.html">Planning to Tell Nonprofit Stories</a></h3>
-          <p>Why testimonial projects should start with the end in mind. Decide the three things you want to be known for, then gather the stories that prove them.</p>
+          <p>Know the story before you gather it. Decide the three things you want to be known for. Then collect the proof.</p>
         </article>
       </div>
       <p class="sec-foot"><a class="arrowlink" href="writing.html">More writing &#8594;</a></p>
@@ -252,7 +273,7 @@ footer a:hover{border-bottom-color:var(--hl)}
     <div class="wrap">
       <p class="eyebrow">Get started</p>
       <h2>Start with a conversation.</h2>
-      <p>Tell Tony what you want your organization to be known for. He will help you say it, everywhere it matters.</p>
+      <p>Tell Tony what you want your organization to be known for. He will help you say it. Everywhere.</p>
       <div class="cta-row">
         <a class="btn" href="mailto:info@theloftisgroup.com">info@theloftisgroup.com</a>
         <a class="btn ghost" href="tel:+16176255980">617-625-5980</a>
